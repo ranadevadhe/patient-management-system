@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="fade-in">Dashboard</h2>
+
+<div class="row fade-in">
+
+    <div class="col-md-6">
+        <div class="dashboard-card bg-patient">
+            <h4>Total Patients</h4>
+            <h2>{{ patients }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="dashboard-card bg-appointment">
+            <h4>Total Appointments</h4>
+            <h2>{{ appointments }}</h2>
+        </div>
+    </div>
+
+</div>  <!-- 👈 END OF CARDS -->
+
+<!-- 👇 ADD THIS PART BELOW CARDS -->
+<div class="mt-4 fade-in">
+    <a href="/add-patient/" class="btn btn-primary me-2">Add Patient</a>
+    <a href="/add-doctor/" class="btn btn-success me-2">Add Doctor</a>
+    <a href="/add-appointment/" class="btn btn-warning">Add Appointment</a>
+</div>
+
+{% endblock %}
